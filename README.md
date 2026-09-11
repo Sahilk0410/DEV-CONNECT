@@ -19,7 +19,7 @@ A RESTful backend API for a developer community platform.
 ## Setup
 
 ```bash
-git clone https://github.com/Sahilk0410/devconnect.git
+git clone https://github.com/Sahilk0410/DEV-CONNECT.git
 cd devconnect
 npm install
 npm run dev
