@@ -38,5 +38,5 @@ src/
 ├── utils/
 ├── db/
 ├── app.js
-└── server.js
+└── index.js
 ```
