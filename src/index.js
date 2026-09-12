@@ -13,7 +13,7 @@ connectDB()
         
     })
 
-    app.get("/users", (req, res) => {
+    app.get("/users", (req,res) => {
         res.send("hello")
     })
 } )
