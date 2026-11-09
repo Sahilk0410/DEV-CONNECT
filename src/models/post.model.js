@@ -1,29 +1,31 @@
-import mongoose, {Schema, trusted} from "mongoose"
-import { User } from "./user.model"
+
+import mongoose, { Schema } from "mongoose"
 
 const postSchema = new Schema({
 
     author: {
         type: Schema.Types.ObjectId,
-        ref: "User"
-    },
-     
-    content: {
-        type: string, 
+        ref: "User",
         required: true
-    }, 
+    },
+
+    content: {
+        type: String,
+        required: true
+    },
 
     image: {
-        type: string, // cloudinary URL
+        type: String,
         required: true
-    }, 
+    },
 
-    likes: {
-        type: Schema.Types.ObjectId,
-        ref: "User"
-    }
+    likes: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ]
 
-
-}, {timestamps: true})
+}, { timestamps: true })
 
 export const Post = mongoose.model("Post", postSchema)
